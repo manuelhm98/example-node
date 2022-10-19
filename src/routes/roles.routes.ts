@@ -1,10 +1,11 @@
-import { Router } from 'express'
-import RolesController from '../controllers/roles.controller'
+import { Router } from "express";
+import RolesController from "../controllers/roles.controller";
 
-const router = Router()
-const rol = RolesController
+const router = Router();
+const rol = RolesController;
 
-router.get('/', rol.listRoles)
-router.post('/', rol.createRoles)
+router.get("/", rol.listRoles);
+router.put("/:id", rol.updateRol);
+router.post("/", rol.createRoles);
 
-export default router
+export default router;
